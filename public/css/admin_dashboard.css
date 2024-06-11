@@ -25,3 +25,113 @@
     font-weight: 600;
     font-size: 25px;
 }
+
+.semua_obat{
+    padding: 15px 25px;
+}
+
+.semua_obat .dua_label{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.semua_obat .dua_label label{
+    width: 50%;
+}
+
+.semua_obat .dua_input{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.semua_obat .dua_input input{
+    width: 50%;
+}
+
+.button_intable{
+    display: flex;
+    gap: 5px;
+}
+
+.beli_obat{
+    padding: 15px 25px;
+}
+
+.dua_obat{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.beli_obat .dua_label{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+
+}
+
+.beli_obat .dua_label label{
+    width: 50%;
+}
+
+.beli_obat .dua_input{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.beli_obat .dua_input input{
+    width: 50%;
+}
+
+.laporanss{
+    padding: 15px 25px;
+}
+
+.status_antrians{
+    display: flex;
+    justify-content: center;
+    background-color: grey  ;
+    margin: 0;
+    border: none;
+    padding: 3px 10px;
+    border-radius: 4px;
+    color: white;
+}
+
+.obat_menipis{padding: 15px 25px;
+}
+
+.akun_pegawai{
+    padding: 15px 25px;
+}
+
+
+.akun_pegawai .dua_label{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.akun_pegawai .dua_label label{
+    width: 50%;
+}
+
+.akun_pegawai .dua_input{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.akun_pegawai .dua_input input{
+    width: 50%;
+}
+
+.akun_pegawai .dua_input select{
+    width: 50%;
+}

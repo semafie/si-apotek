@@ -62,8 +62,8 @@
 
     <ul class="menu-inner py-1">
       <!-- Dashboards -->
-      <li class="menu-item @active('admin_dashboard')">
-        <a href="{{ route('admin_dashboard') }}" class="menu-link ">
+      <li class="menu-item @active('apoteker_dashboard')">
+        <a href="{{ route('apoteker_dashboard') }}" class="menu-link ">
           <i class="menu-icon tf-icons bx bx-home-circle"></i>
           <div data-i18n="Dashboards">Dashboards</div>
           
@@ -71,81 +71,17 @@
       </li>
 
       <!-- Layouts -->
-      <li class="menu-item @active('admin_permintaan_pembelian') @active('admin_pembelian_selesai')">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
-          <i class="menu-icon tf-icons bx bxs-store"></i>
-          <div data-i18n="Layouts">Transaksi</div>
-        </a>
-
-        <ul class="menu-sub">
-          
-          <li class="menu-item @active('admin_permintaan_pembelian')">
-            <a href="{{ route('admin_permintaan_pembelian') }}" class="menu-link">
-              <div data-i18n="Without navbar">Permintaan Pembelian</div>
-            </a>
-          </li>
-          <li class="menu-item @active('admin_pembelian_selesai')">
-            <a href="{{ route('admin_pembelian_selesai') }}" class="menu-link">
-              <div data-i18n="Without menu">Print Nota</div>
-            </a>
-          </li>
-          
-        </ul>
-      </li>
-
-      <!-- Front Pages -->
-
-      <li class="menu-header small text-uppercase">
-        <span class="menu-header-text">DATA MASTER</span>
-      </li>
+      
       <!-- Apps -->
-      <li class="menu-item @active('admin_obat')">
-        <a href="{{ route('admin_obat') }}" class="menu-link">
+      <li class="menu-item @active('apoteker_orderan')">
+        <a href="{{ route('apoteker_orderan') }}" class="menu-link">
           <i class="menu-icon tf-icons bx bxs-capsule"></i>
-          <div data-i18n="Email">Obat</div>
+          <div data-i18n="Email">Orderan Obat</div>
           
         </a>
       </li>
-      <li class="menu-item @active('admin_stok_tipis')">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
-          <i class="menu-icon tf-icons bx bxs-food-menu"></i>
-          <div data-i18n="Layouts">Laporan</div>
-        </a>
-
-        <ul class="menu-sub">
-          <li class="menu-item">
-            <a href="layouts-without-menu.html" class="menu-link">
-              <div data-i18n="Without menu">Penjualan</div>
-            </a>
-          </li>
-          <li class="menu-item @active('admin_stok_tipis')">
-            <a href="{{ route('admin_stok_tipis') }}" class="menu-link">
-              <div data-i18n="Without navbar">Stok Obat Menipis</div>
-            </a>
-          </li>
-          
-        </ul>
-      </li>
-      <li class="menu-item @active('admin_akun_pegawai') @active('admin_akun_apoteker')">
-        <a href="avascript:void(0);" class="menu-link menu-toggle">
-          <i class="menu-icon tf-icons bx bxs-user"></i>
-          <div data-i18n="Chat">Pegawai</div>
-          
-        </a>
-        <ul class="menu-sub">
-          <li class="menu-item @active('admin_akun_pegawai')">
-            <a href="{{ route('admin_akun_pegawai') }}" class="menu-link">
-              <div data-i18n="Without menu">Akun admin</div>
-            </a>
-          </li>
-          <li class="menu-item @active('admin_akun_apoteker')">
-            <a href="{{ route('admin_akun_apoteker') }}" class="menu-link">
-              <div data-i18n="Without navbar">Akun Apoteker</div>
-            </a>
-          </li>
-          
-        </ul>
-      </li>
+      
+      
       
     </ul>
   </aside>
