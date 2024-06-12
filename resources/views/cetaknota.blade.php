@@ -76,7 +76,7 @@
         <div class="header">
             <h1>Medicine <span style="color: #ffb700;">B&S</span></h1>
             <h2>Struk Nota Pembelian Obat</h2>
-            <p>Jl Mastrip No Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut</p>
+            <p>Jl Mastrip No 15</p>
             <b>Kasir:</b>
         </div>
         <table>
@@ -106,8 +106,8 @@
         <div class="totals">
             {{-- <p>SUB TOTAL<span> Rp. 128.000</span></p>
             <p>DISKON <span> 0%</span></p> --}}
-            <p>TOTAL HARGA <span> Rp. 128.000</span></p>
-            <p>CARA BAYAR<span>BCA</span></p>
+            <p>TOTAL HARGA <span> Rp. {{ $pembelian->total_harga }}</span></p>
+            <p>CARA BAYAR<span></span></p>
             {{-- <p>KEMBALIAN<span> Rp. 22.000</span></p> --}}
         </div>
         <div class="note">

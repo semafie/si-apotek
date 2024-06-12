@@ -19,7 +19,7 @@
                 @csrf
             <label for="email">Username</label>
             <br>
-            <input class="input" type="text" id="emails" name="name" placeholder="Masukan email baru" required>
+            <input class="input" type="text" id="emails" name="name" placeholder="Masukan username baru" required>
             <br>
             <label for="email">Email</label>
             <br>
