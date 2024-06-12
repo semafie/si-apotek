@@ -86,9 +86,9 @@ class login_registerController extends Controller
         }
 
         $obat = User::create([
-            'name' => $request->email_baru,
-            'email' => $request->password_baru,
-            'password' => Hash::make($request->konfir_password_baru),
+            'name' => $request->name,
+            'email' => $request->email_baru,
+            'password' => Hash::make($request->password_baru),
             'role' => 'user',
         ]);
 

@@ -17,6 +17,10 @@
 
             <form action="/register/auth" method="POST">
                 @csrf
+            <label for="email">Username</label>
+            <br>
+            <input class="input" type="text" id="emails" name="name" placeholder="Masukan email baru" required>
+            <br>
             <label for="email">Email</label>
             <br>
             <input class="input" type="text" id="emails" name="email_baru" placeholder="Masukan email baru" required>
@@ -31,11 +35,7 @@
             {{-- <a href="#" style="margin-top: 10px; text-align: right; display: block;">Forgot your password?</a> --}}
             <button class="btn" type="submit">Register</button>
             </form>
-            <p>or</p>
-        
-            <div class="google-login">
-                <a href="auth/redirect" style="width: 100%;"><button class="btn"><img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google Logo">Masuk / Daftar dengan Google</button></a>
-            </div>
+            
             <a href="/">kembali ke home?</a>
         </div>
         <div class="image-container">
