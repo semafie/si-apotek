@@ -15,7 +15,7 @@
             
             <h2>Sign up to your account</h2>
 
-            <form action="/register" method="POST">
+            <form action="/register/auth" method="POST">
                 @csrf
             <label for="email">Email</label>
             <br>

@@ -15,7 +15,8 @@ use App\Http\Controllers\userController;
 
 Route::get('/',[login_registerController::class,'show_home'])->name('tampilan_home');
 Route::get('/login',[login_registerController::class,'show_login'])->name('tampilan_login');
-Route::post('/register',[login_registerController::class,'show_register'])->name('tampilan_register');
+Route::get('/register',[login_registerController::class,'show_register'])->name('tampilan_register');
+Route::post('/register/auth',[login_registerController::class,'register']);
 Route::get('/logout',[login_registerController::class,'logout'])->name('logout');
     Route::post('/login/auth',[login_registerController::class,'login'])->name('auth');
 
