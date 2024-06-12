@@ -79,13 +79,13 @@ class login_registerController extends Controller
             // Jika ingin mengecek peran pengguna
             if (Auth::user()->role == 'apoteker') {
 
-                return redirect()->intended('/admin/dashboard');
+                return redirect()->intended('/apoteker/dashboard');
                 // Lakukan sesuatu
             }elseif(Auth::user()->role == 'admin_kasir'){
                 return redirect()->intended('/admin/dashboard')->with(Session::flash('success_message', true));
             }
             elseif(Auth::user()->role == 'pemilik'){
-                return redirect()->intended('/admin/dashboard')->with(Session::flash('berhasil_login', true));
+                return redirect()->intended('/admin_kepala/dashboard')->with(Session::flash('berhasil_login', true));
             }
             elseif(Auth::user()->role == 'user'){
                 return redirect()->intended('/user/dashboard')->with(Session::flash('berhasil_login', true));
