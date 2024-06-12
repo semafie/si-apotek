@@ -400,9 +400,9 @@
 <script>
   @if(Session::has('berhasil_login'))
   Swal.fire({
-    title: 'BAerhasil Login',
+    title: 'Berhasil Login',
     text: 'Anda berhasil login',
-    icon: 'error',
+    icon: 'success',
     confirmButtonText: 'Oke'
   })
 
