@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\obatModel;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -57,6 +58,12 @@ class login_registerController extends Controller
     public function show_login(){
         return view('login_register.login');
     }
+    public function show_home(){
+        $obat = obatModel::all();
+        return view('login_register.home',[
+            'obat' => $obat
+        ]);
+    }
 
     public function login(Request $request){
 
@@ -81,8 +88,7 @@ class login_registerController extends Controller
                 return redirect()->intended('/admin/dashboard')->with(Session::flash('berhasil_login', true));
             }
             elseif(Auth::user()->role == 'user'){
-                return redirect()->intended('/user
-                /dashboard')->with(Session::flash('berhasil_login', true));
+                return redirect()->intended('/user/dashboard')->with(Session::flash('berhasil_login', true));
             }
 
         } else {

@@ -30,12 +30,14 @@
             <p>or</p>
         
             <div class="google-login">
-                <button class="btn"><img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google Logo">Masuk / Daftar dengan Google</button>
+                <a href="auth/redirect"><button class="btn"><img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google Logo">Masuk / Daftar dengan Google</button></a>
             </div>
+            <a href="/">kembali ke home?</a>
         </div>
         <div class="image-container">
             <img src="img/foto_login.png" alt="Medicine B&S">
         </div>
+        
     </div>
 </body>
 </html>

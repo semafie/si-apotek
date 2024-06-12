@@ -10,6 +10,7 @@
         "irsyadulibad/laravel-activehelper": "^0.0.1",
         "laravel/framework": "^11.0",
         "laravel/sanctum": "^4.0",
+        "laravel/socialite": "^5.14",
         "laravel/tinker": "^2.9",
         "midtrans/midtrans-php": "^2.5"
     },

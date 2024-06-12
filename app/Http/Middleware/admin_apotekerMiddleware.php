@@ -29,7 +29,7 @@ class admin_apotekerMiddleware
         } else{
             Auth::logout();
 
-            return redirect()->route('tampilan_loginp')->with(Session::flash('login_dulu', true));
+            return redirect()->route('tampilan_login')->with(Session::flash('login_dulu', true));
         }
     }
 }

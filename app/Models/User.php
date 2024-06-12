@@ -24,6 +24,9 @@ class User extends Authenticatable
         'jenis_kelamin',
         'no_telp',
         'alamat',
+        'google_id',
+        'google_token',
+        'google_refresh_token',
     ];
 
     /**
