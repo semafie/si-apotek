@@ -85,7 +85,7 @@ class login_registerController extends Controller
             return redirect()->route('tampilan_register')->with(Session::flash('kosong_tambah', true));
         }
 
-        $obat = obatModel::create([
+        $obat = User::create([
             'name' => $request->email_baru,
             'email' => $request->password_baru,
             'password' => $request->konfir_password_baru,
