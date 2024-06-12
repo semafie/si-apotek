@@ -30,7 +30,7 @@
             <p>or</p>
         
             <div class="google-login">
-                <a href="auth/redirect"><button class="btn"><img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google Logo">Masuk / Daftar dengan Google</button></a>
+                <a href="auth/redirect" style="width: 100%;"><button class="btn"><img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google Logo">Masuk / Daftar dengan Google</button></a>
             </div>
             <a href="/">kembali ke home?</a>
         </div>
