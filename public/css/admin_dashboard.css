@@ -172,6 +172,11 @@ nav .button{
     gap: 15px;
 }
 
+.nama_navbar{
+    margin-top: 16px;
+    font-size: 20px;
+}
+
 nav .button a button{
     border: none;
     padding: 6px 30px;

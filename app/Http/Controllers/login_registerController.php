@@ -88,7 +88,7 @@ class login_registerController extends Controller
                 return redirect()->intended('/admin_kepala/dashboard')->with(Session::flash('berhasil_login', true));
             }
             elseif(Auth::user()->role == 'user'){
-                return redirect()->intended('/user/dashboard')->with(Session::flash('berhasil_login', true));
+                return redirect()->intended('/user/transaksi_baru')->with(Session::flash('berhasil_login', true));
             }
 
         } else {

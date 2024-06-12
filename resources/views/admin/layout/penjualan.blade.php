@@ -1,7 +1,7 @@
 @extends('admin.template.template-header')
 @section('content')
 <div class="container-xxl flex-grow-1 container-p-y">
-    <div class="card laporanss">
+    <div class="card akun_pegawai">
         <div class="text-nowrap table-responsive pt-0">
             <table id="myTable" class="datatables-basic table border-top">
               <thead>
@@ -25,7 +25,7 @@
                     </td>
                     <td class="button_intable">
                         <button  type="submit" class="btn btn-success detailbtn" data-bs-toggle="modal" data-pembelian="{{ $item->id }}" onclick="filterTable({{ $item->id }})" data-bs-target="#detail">detail</button>
-                        <form action="/cetaknota/{{ $item->id }}" method="POST" target="_blank">
+                        <form action="/cetakpenjualan/{{ $item->id }}" method="POST" target="_blank">
                             @csrf 
                             @method('put')
                         <button  type="submit" class="btn btn-warning detailbtn" >Print</button>
@@ -62,11 +62,9 @@
               </tbody>
             </table>
         </div>
-
-        
-
     </div>
 </div>
+
 <div class="modal fade" id="detail" aria-labelledby="modalToggleLabel" tabindex="-1" style="display: none;" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">

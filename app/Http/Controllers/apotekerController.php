@@ -4,14 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Models\detail_pembelianModel;
 use App\Models\pembelianModel;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
 class apotekerController extends Controller
 {
     public function show_dashboard(){
+        $belumvalidasi = pembelianModel::where('status', 'menunggu apoteker' )->count();
+        $sudahvalidasi = pembelianModel::where('status', 'selesai' )->count();
         return view('apoteker.layout.dashboard',[
-            'title' => 'Dashboard Apoteker'
+            'title' => 'Dashboard Apoteker',
+            'getRecord' => User::find(Auth::user()->id),
+            'belumvalidasi' => $belumvalidasi,
+            'sudahvalidasi' => $sudahvalidasi
         ]);
     }
 
@@ -21,7 +28,8 @@ class apotekerController extends Controller
         return view('apoteker.layout.orderan_obat',[
             'title' => 'Orderan Obat',
             'pembelian' => $pembelian,
-            'detail_pembelian' => $detail_pembelian
+            'detail_pembelian' => $detail_pembelian,
+            'getRecord' => User::find(Auth::user()->id),
         ]);
     }
 

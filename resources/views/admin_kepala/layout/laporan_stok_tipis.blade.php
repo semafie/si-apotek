@@ -1,4 +1,4 @@
-@extends('admin.template.template-header')
+@extends('admin_kepala.template.template-header')
 @section('content')
 <div class="container-xxl flex-grow-1 container-p-y">
     <div class="card obat_menipis">

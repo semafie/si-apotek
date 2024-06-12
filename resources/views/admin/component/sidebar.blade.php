@@ -106,7 +106,7 @@
           
         </a>
       </li>
-      <li class="menu-item @active('admin_stok_tipis')">
+      <li class="menu-item @active('admin_stok_tipis') @active('admin_penjualan')">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons bx bxs-food-menu"></i>
           <div data-i18n="Layouts">Laporan</div>
@@ -114,7 +114,7 @@
 
         <ul class="menu-sub">
           <li class="menu-item">
-            <a href="layouts-without-menu.html" class="menu-link">
+            <a href="{{ route('admin_penjualan') }}" class="menu-link">
               <div data-i18n="Without menu">Penjualan</div>
             </a>
           </li>
@@ -127,7 +127,7 @@
         </ul>
       </li>
       <li class="menu-item @active('admin_akun_pegawai') @active('admin_akun_apoteker')">
-        <a href="avascript:void(0);" class="menu-link menu-toggle">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons bx bxs-user"></i>
           <div data-i18n="Chat">Pegawai</div>
           

@@ -62,13 +62,6 @@
 
     <ul class="menu-inner py-1">
       <!-- Dashboards -->
-      <li class="menu-item @active('user_dashboard')">
-        <a href="{{ route('user_dashboard') }}" class="menu-link ">
-          <i class="menu-icon tf-icons bx bx-home-circle"></i>
-          <div data-i18n="Dashboards">Dashboard</div>
-          
-        </a>
-      </li>
 
       <!-- Layouts -->
       <li class="menu-item open @active('user_transaksi')">

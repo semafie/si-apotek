@@ -62,8 +62,8 @@
 
     <ul class="menu-inner py-1">
       <!-- Dashboards -->
-      <li class="menu-item @active('user_dashboard')">
-        <a href="{{ route('user_dashboard') }}" class="menu-link ">
+      <li class="menu-item @active('adminkepala_dashboard')">
+        <a href="{{ route('adminkepala_dashboard') }}" class="menu-link ">
           <i class="menu-icon tf-icons bx bx-home-circle"></i>
           <div data-i18n="Dashboards">Dashboard</div>
           
@@ -71,27 +71,41 @@
       </li>
 
       <!-- Layouts -->
-      <li class="menu-item open @active('user_transaksi')">
+      <li class="menu-item @active('admin_kepala_penjualan') @active('admin_kepala_stok_tipis')">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
-          <i class="menu-icon tf-icons bx bxs-store"></i>
-          <div data-i18n="Layouts">Transaksi</div>
+          <i class="menu-icon tf-icons bx bxs-food-menu"></i>
+          <div data-i18n="Layouts">Laporan</div>
         </a>
 
         <ul class="menu-sub">
+          <li class="menu-item" @active('admin_kepala_penjualan')>
+            <a href="{{ route('admin_kepala_penjualan') }}" class="menu-link">
+              <div data-i18n="Without menu">Penjualan</div>
+            </a>
+          </li>
+          <li class="menu-item @active('admin_kepala_stok_tipis')">
+            <a href="{{ route('admin_kepala_stok_tipis') }}" class="menu-link">
+              <div data-i18n="Without navbar">Stok Obat Menipis</div>
+            </a>
+          </li>
           
-          <li class="menu-item @active('user_transaksi')">
-            <a href="{{ route('user_transaksi') }}" class="menu-link">
-              <div data-i18n="Without navbar">Buat Transaksi</div>
+        </ul>
+      </li>
+      <li class="menu-item @active('admin_kepala_akun_pegawai') @active('admin_kepala_akun_apoteker')">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+          <i class="menu-icon tf-icons bx bxs-user"></i>
+          <div data-i18n="Chat">Pegawai</div>
+          
+        </a>
+        <ul class="menu-sub">
+          <li class="menu-item @active('admin_kepala_akun_pegawai')">
+            <a href="{{ route('admin_kepala_akun_pegawai') }}" class="menu-link">
+              <div data-i18n="Without menu">Akun admin</div>
             </a>
           </li>
-          <li class="menu-item">
-            <a href="layouts-without-navbar.html" class="menu-link">
-              <div data-i18n="Without navbar">Menunggu Pembayaran</div>
-            </a>
-          </li>
-          <li class="menu-item">
-            <a href="layouts-without-menu.html" class="menu-link">
-              <div data-i18n="Without menu">Riwayat Transaksi</div>
+          <li class="menu-item @active('admin_kepala_akun_apoteker')">
+            <a href="{{ route('admin_kepala_akun_apoteker') }}" class="menu-link">
+              <div data-i18n="Without navbar">Akun Apoteker</div>
             </a>
           </li>
           
