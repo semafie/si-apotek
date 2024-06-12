@@ -53,7 +53,7 @@
             <a href="">Medicine <span>B&S</span></a>
         </div>
         <div class="button">
-            <a href=""><button>Register</button></a>
+            <a href="/register"><button>Register</button></a>
             <a href="/login"><button>Login</button></a>
         </div>
     </nav>

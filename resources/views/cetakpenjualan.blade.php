@@ -54,6 +54,9 @@
             color: #fff;
         }
         .footer-signature {
+            position: absolute;
+            top: 800px;
+            left: 370px;
             text-align: right;
             margin-right: 50px;
             margin-top: 50px;
@@ -103,10 +106,10 @@
         </table>
     </div>
     <div class="footer-signature">
-        <p>TTD APOTEKER Menyetujui</p>
-        <p>Jember, __________________________</p>
+        <p style="margin-right: 22px;">TTD APOTEKER Menyetujui</p>
+        <p>Jember, ________________________</p>
         <br><br>
-        <p>a. n. __________________</p>
+        <p style="margin-right: 22px;">a. n. __________________</p>
     </div>
 </body>
 </html>

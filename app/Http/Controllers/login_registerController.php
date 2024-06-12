@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 
 class login_registerController extends Controller
 {
@@ -58,11 +59,46 @@ class login_registerController extends Controller
     public function show_login(){
         return view('login_register.login');
     }
+    public function show_register(){
+        return view('login_register.register');
+    }
     public function show_home(){
         $obat = obatModel::all();
         return view('login_register.home',[
             'obat' => $obat
         ]);
+    }
+
+    public function register(Request $request){
+        $halo = [
+            'email_baru' => 'required',
+            'password_baru' => 'required',
+            'konfir_password_baru' => 'required',
+        ];
+
+        $validasi = Validator::make($request->all(), $halo);
+        if(!$request->password_baru == $request->konfir_password_baru){
+            return redirect()->route('tampilan_register')->with(Session::flash('tidak_sama', true));
+        }
+        // Jika validasi gagal
+        if ($validasi->fails()) {
+            return redirect()->route('tampilan_register')->with(Session::flash('kosong_tambah', true));
+        }
+
+        $obat = obatModel::create([
+            'name' => $request->email_baru,
+            'email' => $request->password_baru,
+            'password' => $request->konfir_password_baru,
+            'role' => 'user',
+        ]);
+
+
+        if ($obat) {
+            return redirect()->route('tampilan_login')->with(Session::flash('berhasil_tambah', true));
+            
+        } else {
+            return redirect()->route('tampilan_register')->with(Session::flash('gagal_tambah', true));
+        }
     }
 
     public function login(Request $request){

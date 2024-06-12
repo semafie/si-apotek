@@ -36,7 +36,7 @@ $pemasukanTahunIni = pembelianModel::whereYear('tanggal', Carbon::now()->year)->
         $pembelian = pembelianModel::where('status' , 'selesai')->get();
         $detail_pembelian = detail_pembelianModel::all();
         return view('admin_kepala.layout.penjualan',[
-            'title' => 'Data Obat',
+            'title' => 'Laporan Penjualan',
             'pembelian' => $pembelian,
             'detail_pembelian' => $detail_pembelian,
             'getRecord' => User::find(Auth::user()->id),

@@ -397,4 +397,39 @@
 <script>
   let table = new DataTable('#haloobat');
 </script>
+<script>
+  @if(Session::has('berhasil_login'))
+  Swal.fire({
+    title: 'BAerhasil Login',
+    text: 'Anda berhasil login',
+    icon: 'error',
+    confirmButtonText: 'Oke'
+  })
+
+  @elseif(Session::has('tidak_sama'))
+  Swal.fire({
+    title: 'Gagal Register',
+    text: 'password dan konfirmasi password tidak sama',
+    icon: 'error',
+    confirmButtonText: 'Oke'
+  })
+
+  @elseif(Session::has('berhasil_tambah'))
+
+  Swal.fire({
+    title: 'Berhasil',
+    text: 'Data anda berhasil ditambahkan',
+    icon: 'success',
+    confirmButtonText: 'Oke'
+  })
+  @elseif(Session::has('gagal_tambah'))
+
+  Swal.fire({
+    title: 'Gagal Register',
+    text: 'Anda gagal registrasi',
+    icon: 'error',
+    confirmButtonText: 'Oke'
+  })
+  @endif
+  </script>
 @endsection

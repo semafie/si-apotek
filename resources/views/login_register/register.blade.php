@@ -13,19 +13,23 @@
         <div class="form-container">
             
             
-            <h2>Sign in to your account</h2>
+            <h2>Sign up to your account</h2>
 
             <form action="/login/auth" method="POST">
                 @csrf
             <label for="email">Email</label>
             <br>
-            <input class="input" type="text" id="email" name="email" placeholder="Masukan email" required>
+            <input class="input" type="text" id="emails" name="email_baru" placeholder="Masukan email baru" required>
             <br>
             <label for="password">Password</label>
             <br>
-            <input class="input" type="password" id="password" name="password" placeholder="Masukan Password" required>
+            <input class="input" type="password" id="passwords" name="password_baru" placeholder="Masukan Password baru" required>
+            <br>
+            <label for="password">Konfirmasi Password</label>
+            <br>
+            <input class="input" type="password" id="passwordss" name="konfir_password_baru" placeholder="Masukan Konfirmasi Password" required>
             {{-- <a href="#" style="margin-top: 10px; text-align: right; display: block;">Forgot your password?</a> --}}
-            <button class="btn" type="submit">Login</button>
+            <button class="btn" type="submit">Register</button>
             </form>
             <p>or</p>
         
@@ -43,36 +47,36 @@
 </html>
 
 <script>
-    @if(Session::has('gagal_login'))
+    @if(Session::has('kosong_tambah'))
     Swal.fire({
-      title: 'Gagal Login',
-      text: 'Coba cek email atau password kembali',
+      title: 'Gagal register',
+      text: 'tidak boleh ada data yang kosong',
       icon: 'error',
       confirmButtonText: 'Oke'
     })
   
-    @elseif(Session::has('login_dulu'))
+    @elseif(Session::has('tidak_sama'))
     Swal.fire({
-      title: 'Anda Belum Login',
-      text: 'Coba login terlebih dahulu',
+      title: 'Gagal Register',
+      text: 'password dan konfirmasi password tidak sama',
       icon: 'error',
       confirmButtonText: 'Oke'
     })
   
-    @elseif(Session::has('success_delete'))
+    @elseif(Session::has('berhasil_tambah'))
   
     Swal.fire({
       title: 'Berhasil',
-      text: 'Data anda berhasil di Dihapus',
+      text: 'Data anda berhasil ditambahkan',
       icon: 'success',
       confirmButtonText: 'Oke'
     })
-    @elseif(Session::has('berhasil register'))
+    @elseif(Session::has('gagal_tambah'))
   
     Swal.fire({
-      title: 'Berhasil',
-      text: 'Anda berhasil registrasi',
-      icon: 'success',
+      title: 'Gagal Register',
+      text: 'Anda gagal registrasi',
+      icon: 'error',
       confirmButtonText: 'Oke'
     })
     @endif

@@ -64,7 +64,7 @@
       <!-- Dashboards -->
 
       <!-- Layouts -->
-      <li class="menu-item open @active('user_transaksi')">
+      <li class="menu-item open @active('user_transaksi') @active('user_riwayat')">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons bx bxs-store"></i>
           <div data-i18n="Layouts">Transaksi</div>
@@ -77,13 +77,9 @@
               <div data-i18n="Without navbar">Buat Transaksi</div>
             </a>
           </li>
-          <li class="menu-item">
-            <a href="layouts-without-navbar.html" class="menu-link">
-              <div data-i18n="Without navbar">Menunggu Pembayaran</div>
-            </a>
-          </li>
-          <li class="menu-item">
-            <a href="layouts-without-menu.html" class="menu-link">
+          
+          <li class="menu-item @active('user_riwayat')">
+            <a href="{{ route('user_riwayat') }}" class="menu-link">
               <div data-i18n="Without menu">Riwayat Transaksi</div>
             </a>
           </li>

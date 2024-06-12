@@ -15,6 +15,7 @@ use App\Http\Controllers\userController;
 
 Route::get('/',[login_registerController::class,'show_home'])->name('tampilan_home');
 Route::get('/login',[login_registerController::class,'show_login'])->name('tampilan_login');
+Route::get('/register',[login_registerController::class,'show_register'])->name('tampilan_register');
 Route::get('/logout',[login_registerController::class,'logout'])->name('logout');
     Route::post('/login/auth',[login_registerController::class,'login'])->name('auth');
 
@@ -32,6 +33,7 @@ Route::get('/logout',[login_registerController::class,'logout'])->name('logout')
 Route::group(['middleware' => 'user'], function(){
     
     Route::get('/user/transaksi_baru', [userController::class,'show_transaksi'])->name('user_transaksi');
+    Route::get('/user/riwayattransaksi', [userController::class,'show_riwayat'])->name('user_riwayat');
 
 
     Route::post('/user/detail_pembelian/tambah', [detail_pembelianController::class,'tambahdetail'])->name('user_tambahdetail');

@@ -415,4 +415,15 @@
       <!--/ Transactions -->
     </div>
   </div>
+
+  <script>
+    @if(Session::has('berhasil_login'))
+    Swal.fire({
+      title: 'BAerhasil Login',
+      text: 'Anda berhasil login',
+      icon: 'error',
+      confirmButtonText: 'Oke'
+    })
+    @endif
+    </script>
 @endsection

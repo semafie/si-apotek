@@ -27,19 +27,19 @@ class SocialliteController extends Controller
                 'name' => $socialuser->name,
                 'email' => $socialuser->email,
                 'password' => Hash::make('user123'),
-                'role' => 'pasien',
+                'role' => 'user',
                 'google_token' => $socialuser->token,
                 'google_refresh_token' => $socialuser->refreshToken,
             ]);
 
             Auth::login($user);
 
-            return redirect()->route('/user/dashboard');
+            return redirect()->route('user_transaksi');
         }
         
 
         Auth::login($registerUser);
 
-        return redirect()->route('/user/dashboard')->with(Session::flash('berhasil_login', true));
+        return redirect()->route('user_transaksi')->with(Session::flash('berhasil_login', true));
     }
 }

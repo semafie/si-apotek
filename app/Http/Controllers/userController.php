@@ -34,5 +34,15 @@ class userController extends Controller
             'getRecord' => User::find(Auth::user()->id),
         ]);
     }
+    public function show_riwayat(){
+        $pembelian = pembelianModel::where('status' , 'selesai')->get();
+        $detail_pembelian = detail_pembelianModel::all();
+        return view('user.layout.riwayat_transasksi',[
+            'title' => 'Data Obat',
+            'pembelian' => $pembelian,
+            'detail_pembelian' => $detail_pembelian,
+            'getRecord' => User::find(Auth::user()->id),
+        ]);
+    }
     
 }
