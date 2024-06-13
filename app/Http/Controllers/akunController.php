@@ -94,7 +94,7 @@ class akunController extends Controller
             'password' => Hash::make($request->password),
             'alamat' => $request->alamat,
             'jenis_kelamin' => $request->jenis_kelamin,
-            'role' => 'admin_kasir',
+            'role' => 'apoteker',
         ]);
 
 

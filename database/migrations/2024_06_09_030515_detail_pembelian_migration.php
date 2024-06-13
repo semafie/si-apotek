@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('detail_pembelian', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_pembelian');
+            $table->unsignedBigInteger('id_pembelian');
             $table->integer('id_obat');
             $table->string('nama_obat');
             $table->integer('harga_obat');
@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('sub_total');
             $table->string('keterangan')->nullable();
             $table->timestamps();
+            $table->foreign('id_pembelian')->references('id')->on('pembelian')->onDelete('cascade');
         });
     }
 
