@@ -81,12 +81,12 @@ Route::post('/apoteker/carapemakaian/tambah', [apotekerController::class,'tambah
 
 Route::group(['middleware' => 'pemilik'], function(){
     Route::get('/admin_kepala/akun_pegawai', [Admin_kepalaController::class,'show_akun_admin'])->name('admin_kepala_akun_pegawai');
-Route::post('/admin_kepala/akun_pegawaikepala/tambah', [akunController::class,'tambah_pegawai'])->name('tambah_akun_pegawai');
+Route::post('/admin_kepala/akun_pegawai/tambah', [akunController::class,'tambah_pegawaikepala'])->name('tambah_akun_pegawai');
 Route::put('/admin_kepala/akun_pegawai/edit/{id}', [akunController::class,'edit_pegawai'])->name('edit_akun_pegawai');
 Route::delete('/admin_kepala/akun_pegawai/hapus/{id}', [akunController::class,'hapus_pegawai'])->name('hapus_akun_pegawai');
 
 Route::get('/admin_kepala/akun_apoteker', [Admin_kepalaController::class,'show_akun_apoteker'])->name('admin_kepala_akun_apoteker');
-Route::post('/admin_kepala/akun_apotekerkepala/tambah', [akunController::class,'tambah_apoteker'])->name('tambah_akun_apoteker');
+Route::post('/admin_kepala/akun_apoteker/tambah', [akunController::class,'tambah_apotekerkepala'])->name('tambah_akun_apoteker');
     Route::put('/admin_kepala/akun_apoteker/edit/{id}', [akunController::class,'edit_apoteker'])->name('edit_akun_apoteker');
 Route::delete('/admin_kepala/akun_apoteker/hapus/{id}', [akunController::class,'hapus_apoteker'])->name('hapus_akun_apoteker');
 
