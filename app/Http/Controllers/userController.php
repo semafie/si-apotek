@@ -28,7 +28,7 @@ class userController extends Controller
     $detail_pembelian = detail_pembelianModel::where('id_pembelian', $newIdPembelian)->get();
         $obat = obatModel::all();
         return view('user.layout.transaksi_baru',[
-            'title' => 'Dashboard konsumen',
+            'title' => 'Buat Transaksi Baru',
             'obat' => $obat,
             'detail_pembelian' => $detail_pembelian,
             'getRecord' => User::find(Auth::user()->id),
@@ -38,7 +38,7 @@ class userController extends Controller
         $pembelian = pembelianModel::where('status' , 'selesai')->get();
         $detail_pembelian = detail_pembelianModel::all();
         return view('user.layout.riwayat_transasksi',[
-            'title' => 'Data Obat',
+            'title' => 'Data Riwayat Transaksi',
             'pembelian' => $pembelian,
             'detail_pembelian' => $detail_pembelian,
             'getRecord' => User::find(Auth::user()->id),
