@@ -54,7 +54,7 @@ class akunController extends Controller
         $user->save();
 
         // if ($user) {
-            return redirect()->route('admin_akun_pegawai')->with(Session::flash('berhasil_edit', true));
+            return redirect()->route('admin_kepala_akun_pegawai')->with(Session::flash('berhasil_edit', true));
         // } else {
         //     return redirect()->route('admin_akun_pegawai')->with(Session::flash('gagal_edit', true));
         // }
@@ -66,7 +66,7 @@ class akunController extends Controller
         $user->delete();
 
         // if ($user) {
-            return redirect()->route('admin_akun_pegawai')->with(Session::flash('berhasil_hapus', true));
+            return redirect()->route('admin_kepala_akun_pegawai')->with(Session::flash('berhasil_hapus', true));
         // } else {
         //     return redirect()->route('kepala_akunadmin')->with(Session::flash('gagal_hapus', true));
         // }
@@ -116,7 +116,7 @@ class akunController extends Controller
         $user->save();
 
         // if ($user) {
-            return redirect()->route('admin_akun_apoteker')->with(Session::flash('berhasil_edit', true));
+            return redirect()->route('admin_kepala_akun_apoteker')->with(Session::flash('berhasil_edit', true));
         // } else {
         //     return redirect()->route('admin_akun_apoteker')->with(Session::flash('gagal_edit', true));
         // }
@@ -128,7 +128,7 @@ class akunController extends Controller
         $user->delete();
 
         // if ($user) {
-            return redirect()->route('admin_akun_apoteker')->with(Session::flash('berhasil_hapus', true));
+            return redirect()->route('admin_kepala_akun_apoteker')->with(Session::flash('berhasil_hapus', true));
         // } else {
         //     return redirect()->route('kepala_akunadmin')->with(Session::flash('gagal_hapus', true));
         // }
