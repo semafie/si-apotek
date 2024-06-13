@@ -43,6 +43,40 @@ class akunController extends Controller
         }
     }
 
+    public function tambah_pegawaikepala(Request $request){
+        $halo = [
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+            'alamat' => 'required',
+            'jenis_kelamin' => 'required',
+        ];
+
+        $validasi = Validator::make($request->all(), $halo);
+
+        // Jika validasi gagal
+        if ($validasi->fails()) {
+            return redirect()->route('admin_kepala_akun_pegawai')->with(Session::flash('kosong_tambah', true));
+        }
+
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'alamat' => $request->alamat,
+            'jenis_kelamin' => $request->jenis_kelamin,
+            'role' => 'admin_kasir',
+        ]);
+
+
+        if ($user) {
+            return redirect()->route('admin_kepala_akun_pegawai')->with(Session::flash('berhasil_tambah', true));
+        } else {
+            return redirect()->route('admin_kepala_akun_pegawai')->with(Session::flash('gagal_tambah', true));
+        }
+    }
+    
+
     public function edit_pegawai(Request $request, $id){
         $user = User::findorFAil($id);
 
@@ -102,6 +136,38 @@ class akunController extends Controller
             return redirect()->route('admin_akun_apoteker')->with(Session::flash('berhasil_tambah', true));
         } else {
             return redirect()->route('admin_akun_apoteker')->with(Session::flash('gagal_tambah', true));
+        }
+    }
+    public function tambah_apotekerkepala(Request $request){
+        $halo = [
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+            'alamat' => 'required',
+            'jenis_kelamin' => 'required',
+        ];
+
+        $validasi = Validator::make($request->all(), $halo);
+
+        // Jika validasi gagal
+        if ($validasi->fails()) {
+            return redirect()->route('admin_kepala_akun_apoteker')->with(Session::flash('kosong_tambah', true));
+        }
+
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'alamat' => $request->alamat,
+            'jenis_kelamin' => $request->jenis_kelamin,
+            'role' => 'apoteker',
+        ]);
+
+
+        if ($user) {
+            return redirect()->route('admin_kepala_akun_apoteker')->with(Session::flash('berhasil_tambah', true));
+        } else {
+            return redirect()->route('admin_kepala_akun_apoteker')->with(Session::flash('gagal_tambah', true));
         }
     }
 
