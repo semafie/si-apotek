@@ -85,7 +85,8 @@
                   <td>{{ $item->harga_obat }}</td>
                   <td>{{ $item->jumlah_stok }}</td>
                   <td>
-                    <button type="button" class="btn btn-warning pilih-obat" data-id="{{ $item->id }}" data-nama="{{ $item->nama_obat }}" data-harga="{{ $item->harga_obat }}" data-bs-toggle="modal" data-bs-target="#masukkansubtotal">Pilih Obat</button>
+                    <button type="button" class="btn btn-warning pilih-obat" data-id="{{ $item->id }}" data-nama="{{ $item->nama_obat }}" data-harga="{{ $item->harga_obat }}" 
+                      onclick="pilihobat('{{ $item->id }}', '{{ $item->nama_obat }}', '{{ $item->harga_obat }}')" data-bs-toggle="modal" data-bs-target="#masukkansubtotal">Pilih Obat</button>
                   </td>
                 </tr>
                 @endforeach
@@ -268,25 +269,34 @@
 
 
 <script>
+  function pilihobat(id, namaObat, hargaobat){
+    document.getElementById('nama_obat').value = namaObat;
+    document.getElementById('harga_obat').value = hargaobat;
+    document.getElementById('id_obats').value = id;
+    document.getElementById('jumlah_stok').value = '';
+    document.getElementById('sub_total').value = '';
+  }
+
+
   document.addEventListener('DOMContentLoaded', function () {
 
     
 
 
       const buttons = document.querySelectorAll('.pilih-obat');
-      buttons.forEach(button => {
-          button.addEventListener('click', function () {
-              const namaObat = this.getAttribute('data-nama');
-              const hargaObat = this.getAttribute('data-harga');
-              const idObat = this.getAttribute('data-id');
+      // buttons.forEach(button => {
+      //     button.addEventListener('click', function () {
+      //         const namaObat = this.getAttribute('data-nama');
+      //         const hargaObat = this.getAttribute('data-harga');
+      //         const idObat = this.getAttribute('data-id');
 
-              document.getElementById('jumlah_stok').value = '';
-              document.getElementById('sub_total').value = '';
-              document.getElementById('nama_obat').value = namaObat;
-              document.getElementById('harga_obat').value = hargaObat;
-              document.getElementById('id_obats').value = idObat;
-          });
-      });
+      //         document.getElementById('jumlah_stok').value = '';
+      //         document.getElementById('sub_total').value = '';
+      //         document.getElementById('nama_obat').value = namaObat;
+      //         document.getElementById('harga_obat').value = hargaObat;
+      //         document.getElementById('id_obats').value = idObat;
+      //     });
+      // });
       const jumlahStokInput = document.getElementById('jumlah_stok');
         const subTotalInput = document.getElementById('sub_total');
         const hargaObatInput = document.getElementById('harga_obat');
